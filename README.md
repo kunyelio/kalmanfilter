@@ -483,3 +483,7 @@ zstd-jni-1.3.2-2.jar
 
 
 You can place all those libraries under a lib folder and make them available for compilation and run-time.
+
+For convenience, have a look at kalman_filter.zip, state_model.zip that are directly exported from IntelliJ. Those can be used to construct the corresponding projects in IntelliJ via import. 
+
+In order to obtain executable jar files for each project, create an IntelliJ artifact of type 'jar' with all the libraries in it. Use the MANIFEST.MF file provided under src/main/java/META-INf file under each module. Finally, for kalman_filter the executable is org.demo.spark.streaming.consumer.KalmanFilter and for state_model the executable is org.demo.spark.streaming.producer.StateModel. For modules kalman_filter and state_model we have named the executables kalman_filter.jar and state_model.jar, respectively.
